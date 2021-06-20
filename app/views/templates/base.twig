@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lan="en">
+	<head>
+		{% include("templates/head.twig") %}
+		<title>
+			Library Management System
+		</title>
+	</head>
+	<body>
+
+        <div class="topbar">
+            {% block topbar %}
+
+            {% block iconbar %}{% endblock %}
+            {% block navbar %}{% endblock %}
+            
+            {% endblock %}
+        </div>
+
+		{% block body %}{% endblock %}
+	</body>
+</html>

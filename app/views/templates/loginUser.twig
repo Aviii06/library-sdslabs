@@ -1,0 +1,54 @@
+{% extends "templates/base.twig" %}
+
+{% block topbar %}
+
+	{% block iconbar %}
+		{% include "templates/icon.twig" %}
+	{% endblock %}
+
+	{% block navbar %}
+		{% include "templates/homeNavbar.twig" %}
+	{% endblock %}
+
+
+{% endblock %}
+
+{% block body %}
+
+	<div class="home">
+		<div class="container">
+
+			<div class="text_container">
+				<h2>Login as User</h2><br>
+			</div>
+
+			<form action="/loginUser" method="POST">
+				{% block login %}
+					{% include("templates/login.twig") %}
+				{% endblock %}
+			</form>
+
+		</div>
+
+
+		<br><br>
+
+		<div class="alert" style="bottom:30px;">
+			{% if notExists %}
+				<em>
+					<strong>Email-id does not exist</strong>
+				</em>
+			{% endif %}
+
+			{% if wrongPwd %}
+				<em>
+					<strong>User id does not match with password</strong>
+				</em>
+			{% endif %}
+
+		</div>
+
+	</div>
+
+
+{% endblock %}

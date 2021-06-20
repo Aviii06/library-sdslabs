@@ -1,0 +1,23 @@
+{% extends "templates/base.twig" %}
+
+{% block topbar %}
+
+	{% block iconbar %}
+		{% include "templates/icon.twig" %}
+	{% endblock %}
+
+	{% block navbar %}
+		{% include "templates/userNavbar.twig" %}
+	{% endblock %}
+
+
+{% endblock %}
+
+
+{% block body %}
+
+	<div class="home">
+		<h1>Welcome to User Portal</h1>
+	</div>
+
+{% endblock %}
